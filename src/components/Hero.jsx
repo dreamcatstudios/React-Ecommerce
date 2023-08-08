@@ -21,7 +21,7 @@ const Hero = () => {
         </div>
         <div className="relative">
           <div>
-            <img src="/src/assets/hero.jpg" />
+            <img src="../assets/hero.jpg" />
           </div>
           <div className="bg-purple-200 absolute px-36 py-28 left-52 -top-12 -z-10 hidden sm:block"></div>
         </div>
