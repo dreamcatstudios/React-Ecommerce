@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useProductContext } from "../context/productContext";
+import { useProductContext } from "../context/ProductContext";
 import FormatPrice from "../helpers/FormatPrice";
 
 const FeatureSection = () => {

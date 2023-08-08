@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useProductContext } from "../context/productContext";
+import { useProductContext } from "../context/ProductContext";
 import { useEffect } from "react";
 import { FaTruck, FaUndo, FaClock, FaShieldAlt } from "react-icons/fa"; // Importing icons from react-icons
 import Header from "../components/Header";
