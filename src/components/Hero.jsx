@@ -1,4 +1,5 @@
 import React from "react";
+import hero from "../assets/hero.jpg";
 
 const Hero = () => {
   return (
@@ -21,7 +22,7 @@ const Hero = () => {
         </div>
         <div className="relative">
           <div>
-            <img src="../../public/hero.jpg" />
+            <img src={hero} />
           </div>
           <div className="bg-purple-200 absolute px-36 py-28 left-52 -top-12 -z-10 hidden sm:block"></div>
         </div>
