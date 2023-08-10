@@ -5,6 +5,7 @@ import { FaTruck, FaUndo, FaClock, FaShieldAlt } from "react-icons/fa"; // Impor
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import StarComponents from "../components/StarComponents";
+import AddToCart from "../components/AddToCart";
 
 const API = "https://api.pujakaitem.com/api/products";
 
@@ -82,14 +83,7 @@ const SingleProduct = () => {
               <h1>{`Brand: ${company}`}</h1>
             </div>
             <div className="border"></div>
-            <div className="flex flex-row">
-              <h1>Color:</h1>
-            </div>
-            <div>
-              <button className="px-5 py-2 text-white bg-purple-500">
-                ADD TO CART
-              </button>
-            </div>
+            {stock > 0 && <AddToCart product={singleProduct} />}
           </div>
         </div>
       </section>
