@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="py-3 bg-gray-100">
-      <nav className="flex items-center justify-between px-5 sm:px-0 md:justify-around">
+      <nav className="flex items-center justify-between px-5 md:px-0 md:justify-around">
         <NavLink to="/">
           <div className="hover:text-purple-500 hover:underline transform transition-transform duration-300">
             <h1>Jatin Store</h1>
