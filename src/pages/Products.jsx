@@ -35,15 +35,15 @@ const Products = () => {
     return (
       <>
         <Header />
-        <div className="flex flex-row  justify-center pt-10">
-          <div className="flex flex-col gap-2 border border-orange-500">
+        <div className="flex flex-col md:flex-row justify-center pt-10">
+          <div className="flex flex-col items-center md:items-start gap-2 border border-orange-500">
             <input
               type="text"
               placeholder="Search"
               className="px-5 py-3 border rounded-sm"
             />
             <h1 className="text-xl">Category</h1>
-            <div className="flex flex-col items-start gap-3 ">
+            <div className="flex flex-col items-center md:items-start gap-3">
               <button onClick={() => filterLogic("all")}>All</button>
               <button onClick={() => filterLogic("mobile")}>Mobile</button>
               <button onClick={() => filterLogic("laptop")}>Laptop</button>
@@ -68,6 +68,7 @@ const Products = () => {
               <button className="px-5 py-3 bg-orange-500">Clear Filters</button>
             </div>
           </div>
+
           <div className="flex flex-col border border-orange-500">
             <div className="flex flex-row gap-5 items-center justify-center p-5 border">
               <h1 className="text-center">{`${filter_products.length} Total Products`}</h1>
