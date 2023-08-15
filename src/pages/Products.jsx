@@ -8,7 +8,6 @@ import { useFilterContext } from "../context/FilterContext";
 const Products = () => {
   const { isLoading, filter_products } = useFilterContext();
   const [sortType, setSortType] = useState("lowest_sort");
-
   const [sortedProducts, setSortedProducts] = useState([...filter_products]);
 
   console.log("Sorted Products:", sortedProducts);
