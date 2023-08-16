@@ -18,19 +18,19 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-around mt-5">
+      <div className="flex flex-col text-center gap-5 sm:gap-2 sm:flex-row justify-around mt-5">
         <div>
-          <h3 className="text-white">Contact</h3>
+          <h3 className="text-white text-xl">Contact</h3>
           <p>Email: contact@example.com</p>
           <p>Phone: +1 123-456-7890</p>
         </div>
         <div>
-          <h3 className="text-white">Terms of Service</h3>
+          <h3 className="text-white text-xl">Terms of Service</h3>
           <p>Terms & Conditions</p>
           <p>Privacy Policy</p>
         </div>
         <div>
-          <h3 className="text-white">Social Media</h3>
+          <h3 className="text-white text-xl">Social Media</h3>
           <p>Facebook</p>
           <p>Twitter</p>
           <p>Instagram</p>

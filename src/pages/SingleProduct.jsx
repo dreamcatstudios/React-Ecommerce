@@ -1,6 +1,6 @@
 import { NavLink, useParams } from "react-router-dom";
 import { useProductContext } from "../context/ProductContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FaTruck, FaUndo, FaClock, FaShieldAlt } from "react-icons/fa"; // Importing icons from react-icons
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -83,11 +83,7 @@ const SingleProduct = () => {
               <h1>{`Brand: ${company}`}</h1>
             </div>
             <div className="border"></div>
-            {stock > 0 && (
-              <NavLink to="./Cart.jsx">
-                <AddToCart product={singleProduct} />
-              </NavLink>
-            )}
+            {stock > 0 && <AddToCart product={singleProduct} />}
           </div>
         </div>
       </section>

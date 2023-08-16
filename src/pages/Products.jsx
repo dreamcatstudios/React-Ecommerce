@@ -4,6 +4,7 @@ import FormatPrice from "../helpers/FormatPrice";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useFilterContext } from "../context/FilterContext";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const { isLoading, filter_products } = useFilterContext();
@@ -53,7 +54,7 @@ const Products = () => {
               </button>
               <button onClick={() => filterLogic("watch")}>Watch</button>
             </div>
-
+            {/* 
             <h1>Price</h1>
             <div>
               <input
@@ -63,7 +64,7 @@ const Products = () => {
                 step="500"
                 type="range"
               />
-            </div>
+            </div> */}
             <div>
               <button className="px-5 py-3 bg-orange-500">Clear Filters</button>
             </div>
@@ -84,22 +85,24 @@ const Products = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
               {sortedProducts.map((item, index) => (
-                <div key={index}>
-                  <div className="relative">
-                    <div className="absolute px-5 py-1 rounded-md bg-white top-2 right-2">
-                      {item.category}
+                <Link to={`/product/${item.id}`}>
+                  <div key={index}>
+                    <div className="relative">
+                      <div className="absolute px-5 py-1 rounded-md bg-white top-2 right-2">
+                        {item.category}
+                      </div>
+                      <img
+                        className="rounded-sm brightness-70"
+                        src={item.image}
+                        alt={item.category}
+                      />
                     </div>
-                    <img
-                      className="rounded-sm brightness-70"
-                      src={item.image}
-                      alt={item.category}
-                    />
+                    <div className="flex flex-row justify-between">
+                      <h1>{item.name}</h1>
+                      <h1>{<FormatPrice currency={item.price} />}</h1>
+                    </div>
                   </div>
-                  <div className="flex flex-row justify-between">
-                    <h1>{item.name}</h1>
-                    <h1>{<FormatPrice currency={item.price} />}</h1>
-                  </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
